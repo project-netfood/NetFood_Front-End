@@ -1,4 +1,5 @@
 import * as React from 'react';
+import "../assets/css/index.css"
 import italien1 from "../assets/img/lasagne.jpg"
 import italien2 from "../assets/img/involtinis.jpg"
 import italien3 from "../assets/img/muffuletta.jpg"
@@ -7,84 +8,103 @@ import indien2 from "../assets/img/omelette.jpeg"
 import indien3 from "../assets/img/kefta.jpeg"
 
 export default function main() {
-    return (
-        <React.Fragment>
-            <div>
-                <div>
-                    <div>
-                        <h1>Italien</h1>
-                        <img className="img_italien1"
-                            src={italien1}
-                            alt="Lasagne Italienne"
-                        />
-                        <h3>Lasagne Italienne</h3>
-                    </div>
-                    <div>
-                        <img className="img_italien2"
-                            src={italien2}
-                            alt="Involtinis au poulet champignons et mozzarella"
-                        />
-                        <h3>Involtinis au poulet champignons et mozzarella</h3>
-                    </div>
-                    <div>
-                        <img className="img_italien3"
-                            src={italien3}
-                            alt="Muffuletta sandwich sicilien au salami mortadelle et provolone"
-                        />
-                        <h3>Muffuletta sandwich sicilien au salami mortadelle et provolone</h3>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <h1>Indien</h1>
-                        <img className="img_indien1"
-                            src={indien1}
-                            alt="Pizza à l'Indienne"
-                        />
-                        <h3>Pizza à l'Indienne</h3>
-                    </div>
-                    <div>
-                        <img className="img_indien2"
-                            src={indien2}
-                            alt="Omelette indienne"
-                        />
-                        <h3>Omelette indienne</h3>
-                    </div>
-                    <div>
-                        <img className="img_indien3"
-                            src={indien3}
-                            alt="Kefta à l'indienne"
-                        />
-                        <h3>Kefta à l'indienne</h3>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <h1>Italien</h1>
-                        <img className="logo_netfood"
-                            src={italien1}
-                            alt="Lasagne Italienne"
-                        />
-                        <h3>Lasagne Italienne</h3>
-                    </div>
-                    <div>
-                        <img className="logo_netfood"
-                            src={italien2}
-                            alt="Involtinis au poulet champignons et mozzarella"
-                        />
-                        <h3>Involtinis au poulet champignons et mozzarella</h3>
-                    </div>
-                    <div>
-                        <img className="logo_netfood"
-                            src={italien3}
-                            alt="Muffuletta sandwich sicilien au salami mortadelle et provolone"
-                        />
-                        <h3>Muffuletta sandwich sicilien au salami mortadelle et provolone</h3>
-                    </div>
-                </div>
-                
-            </div>
-        </React.Fragment>
-    )
+  return (
+    <React.Fragment>
+      <div className='container_main'>
+        <div className='theme'>
+          <h3 className='titre_theme'>Italien</h3>
+          <div className='plat'>
+            <figure>
+              <img className="img_plat"
+                src={italien1}
+                alt="Lasagne Italienne"
+              />
+              <figcaption>Lasagne Italienne</figcaption>
+            </figure>
+          </div>
+          <div className='plat'>
+            <figure>
+              <img className="img_plat"
+                src={italien2}
+                alt="Involtinis au poulet champignons et mozzarella"
+              />
+              <figcaption>Involtinis au poulet champignons et mozzarella</figcaption>
+            </figure>
+          </div>
+          <div className='plat'>
+            <figure>
+              <img className="img_plat"
+                src={italien3}
+                alt="Muffuletta sandwich sicilien au salami mortadelle et provolone"
+              />
+              <figcaption>Muffuletta sandwich sicilien au salami mortadelle et provolone</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div className='theme'>
+          <h3 className='titre_theme'>Indien</h3>
+          <div className='plat'>
+            <figure>
+              <img className="img_plat"
+                src={indien1}
+                alt="Pizza à l'Indienne"
+              />
+              <figcaption>Pizza à l'Indienne</figcaption>
+            </figure>
+          </div>
+          <div className='plat'>
+            <figure>
+              <img className="img_plat"
+                src={indien2}
+                alt="Omelette indienne"
+              />
+              <figcaption>Omelette indienne</figcaption>
+            </figure>
+          </div>
+          <div className='plat'>
+            <figure>
+              <img className="img_plat"
+                src={indien3}
+                alt="Kefta à l'indienne"
+              />
+              <figcaption>Kefta à l'indienne</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div className='theme'>
+          <h3 className='titre_theme'>Indien</h3>
+          <div className='plat'>
+            <figure>
+              <img className="img_plat"
+                src={indien1}
+                alt="Pizza à l'Indienne"
+              />
+              <figcaption>Pizza à l'Indienne</figcaption>
+            </figure>
+          </div>
+          <div className='plat'>
+            <figure>
+              <img className="img_plat"
+                src={indien2}
+                alt="Omelette indienne"
+              />
+              <figcaption>Omelette indienne</figcaption>
+            </figure>
+          </div>
+          <div className='plat'>
+            <figure>
+              <img className="img_plat"
+                src={indien3}
+                alt="Kefta à l'indienne"
+              />
+              <figcaption>Kefta à l'indienne</figcaption>
+            </figure>
+          </div>
+        </div>
+        
+
+      </div>
+    </React.Fragment>
+  )
 }
 
