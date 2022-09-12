@@ -6,21 +6,37 @@ import italien3 from "../assets/img/muffuletta.jpg"
 import indien1 from "../assets/img/pizza.jpeg"
 import indien2 from "../assets/img/omelette.jpeg"
 import indien3 from "../assets/img/kefta.jpeg"
+import { useState } from 'react';
+//import Modal from './Modal';
+
 
 export default function main() {
+
+  const [modal, setModal] = useState(false);
+
+  const handleOpen = () => {
+    setModal(true);
+  };
+
+  const handleClose = () => {
+    setModal(false);
+  };
+
   return (
     <React.Fragment>
       <div className='container_main'>
         <div className='theme'>
           <h3 className='titre_theme'>Italien</h3>
           <div className='plat'>
-            <figure>
-              <img className="img_plat"
-                src={italien1}
-                alt="Lasagne Italienne"
-              />
-              <figcaption>Lasagne Italienne</figcaption>
-            </figure>
+            <a onClick={handleOpen} className="btn-modal">
+              <figure>
+                <img className="img_plat"
+                  src={italien1}
+                  alt="Lasagne Italienne"
+                />
+                <figcaption>Lasagne Italienne</figcaption>
+              </figure>
+            </a>
           </div>
           <div className='plat'>
             <figure>
@@ -101,9 +117,23 @@ export default function main() {
             </figure>
           </div>
         </div>
-        
-
       </div>
+      {modal &&
+        <div className="overlay">
+          <div className="modal">
+            <div className="modal-content">
+              <h2>Hello Modal</h2>
+              <p>
+                test
+              </p>
+              <button onClick={handleClose} className="close-modal">
+                CLOSE
+              </button>
+            </div>
+          </div>
+        </div>
+
+      }
     </React.Fragment>
   )
 }

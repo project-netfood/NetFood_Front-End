@@ -16,13 +16,14 @@ function Header() {
             />
           </Link>
         </div>
-        <div>
-          <Link to="espace-client">
+        <div className='div_client'>
+          <Link to="espace-client" className='link_client'>
             <img className='logo_client' 
                 src={logo_client} 
                 alt="Logo_Client"
             />
           </Link>
+          <p className='nom_client'>Bonjour Jean-Test</p>
         </div>
       </div>
     </React.Fragment>

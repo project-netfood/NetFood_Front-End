@@ -7,7 +7,7 @@ export default function Carrousel() {
     <div className='container_carrousel'>
       <img className='image1'
         src={image1}
-        alt="Image de plat"
+        alt="Image_de_plat"
       />
       <div className='text'>
         <h2 className='p1'>Au menu</h2>

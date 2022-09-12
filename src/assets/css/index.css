@@ -1,12 +1,13 @@
-.body {
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* -----Header----- */
+
 .logo_header{
     width: 350px;
-    height: 135px;
     margin: auto;
 
 }
@@ -18,7 +19,6 @@
     background-color: white;
     height: 135px;
     top: 0px;
-    padding-top: 10px;
     box-shadow: 1px 1px 2px black;
 }
 
@@ -31,6 +31,8 @@ h1 {
   margin-top: 130px;
   margin-bottom: 100px;
 }
+
+/* -----Main-----*/
 
 .container_main {
   display: flex;
@@ -52,11 +54,27 @@ figcaption {
   margin-top: 40px;
 }
 
+.div_client {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
 .logo_client {
   width: 60px;
   height: 60px;
-  margin-right: 90px;
-  margin-top: 20px;
+  text-align: center;
+}
+
+.nom_client {
+  text-align: center;
+}
+
+.link_client {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 figure {
@@ -100,6 +118,8 @@ figure:hover {
   font-size: 2.5em;
 }
 
+/* -----Footer-----*/
+
 .container_footer {
   display: flex;
   margin-top: 50px;
@@ -121,6 +141,8 @@ figure:hover {
   color: #db202c;
 }
 
+/* -----Espace-client-----*/
+
 .titre_info_personnelle {
   margin-top: 250px;
   margin-left: 100px;
@@ -141,4 +163,43 @@ figure:hover {
   font-weight: bold;
   font-size: 1.1em;
   margin-top: 50px;
+}
+
+/* -----Modal-----*/
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(6px);
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: #fff;
+  width: 60%;
+  min-height: 50vh;
+  padding: 30px;
+  box-shadow: 0px 3px 6px #00000029;
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
+}
+.modal-content p {
+  line-height: 1.4;
+}
+
+.close-modal {
+
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
 }
