@@ -7,12 +7,14 @@ import indien1 from "../assets/img/pizza.jpeg"
 import indien2 from "../assets/img/omelette.jpeg"
 import indien3 from "../assets/img/kefta.jpeg"
 import { useState } from 'react';
-//import Modal from './Modal';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 
 export default function main() {
 
   const [modal, setModal] = useState(false);
+  const [validModal, setValidModal] = useState(false)
 
   const handleOpen = () => {
     setModal(true);
@@ -22,8 +24,54 @@ export default function main() {
     setModal(false);
   };
 
+  const handleValidModal = () => {
+    setValidModal(true)
+  }
+
+
+
   return (
     <React.Fragment>
+
+      {validModal &&
+        <div className="overlay">
+          <div className="modal">
+            <div className="modal-content">
+              <h2 className='titre_modal'>Confirmation de votre plat</h2>
+              <p>
+                Votre plat est validé ! Bonne dégustation.
+              </p>
+            </div>
+            <div className='modal-content2'>
+              <button onClick={handleClose} className="close-modal">
+                ANNULER
+              </button>
+            </div>
+          </div>
+        </div>
+      }
+
+      {modal &&
+        <div className="overlay">
+          <div className="modal">
+            <div className="modal-content">
+              <h2 className='titre_modal'>Confirmation de votre plat</h2>
+              <p>
+                Souhaitez-vous commander ce plat ?
+              </p>
+            </div>
+            <div className='modal-content2'>
+              <button onClick={handleValidModal} className="open-new-modal">
+                VALIDER
+              </button>
+              <button onClick={handleClose} className="close-modal">
+                ANNULER
+              </button>
+            </div>
+          </div>
+        </div>
+      }
+
       <div className='container_main'>
         <div className='theme'>
           <h3 className='titre_theme'>Italien</h3>
@@ -118,22 +166,7 @@ export default function main() {
           </div>
         </div>
       </div>
-      {modal &&
-        <div className="overlay">
-          <div className="modal">
-            <div className="modal-content">
-              <h2>Hello Modal</h2>
-              <p>
-                test
-              </p>
-              <button onClick={handleClose} className="close-modal">
-                CLOSE
-              </button>
-            </div>
-          </div>
-        </div>
 
-      }
     </React.Fragment>
   )
 }
