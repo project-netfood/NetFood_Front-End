@@ -7,8 +7,6 @@ import indien1 from "../assets/img/pizza.jpeg"
 import indien2 from "../assets/img/omelette.jpeg"
 import indien3 from "../assets/img/kefta.jpeg"
 import { useState } from 'react';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 
 
 export default function main() {
@@ -22,10 +20,12 @@ export default function main() {
 
   const handleClose = () => {
     setModal(false);
+    setValidModal(false)
   };
 
   const handleValidModal = () => {
     setValidModal(true)
+    setModal(false)
   }
 
 
@@ -37,14 +37,15 @@ export default function main() {
         <div className="overlay">
           <div className="modal">
             <div className="modal-content">
-              <h2 className='titre_modal'>Confirmation de votre plat</h2>
+              <h2 className='titre_modal'>Plat commandée</h2>
               <p>
-                Votre plat est validé ! Bonne dégustation.
+                Votre plat est validé ! Votre commande sera bientôt expédiée.
               </p>
+              <p>Bonne dégustation.</p>
             </div>
             <div className='modal-content2'>
               <button onClick={handleClose} className="close-modal">
-                ANNULER
+                RETOUR
               </button>
             </div>
           </div>
