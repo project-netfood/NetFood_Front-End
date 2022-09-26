@@ -77,7 +77,7 @@ export default function main() {
         <div className='theme'>
           <h3 className='titre_theme'>Italien</h3>
           <div className='plat'>
-            <a href="#" onClick={handleOpen} className="btn-modal">
+            <a onClick={handleOpen} className="btn-modal">
               <figure>
                 <img className="img_plat"
                   src={italien1}
