@@ -1,4 +1,5 @@
 import * as React from 'react';
+import axios from 'axios'
 import "../assets/css/index.css"
 import italien1 from "../assets/img/lasagne.jpg"
 import italien2 from "../assets/img/involtinis.jpg"
@@ -8,11 +9,22 @@ import indien2 from "../assets/img/omelette.jpeg"
 import indien3 from "../assets/img/kefta.jpeg"
 import { useState } from 'react';
 
-
 export default function main() {
 
   const [modal, setModal] = useState(false);
   const [validModal, setValidModal] = useState(false)
+
+  // const testApi = () => {
+  //   fetch('http://localhost:5000/plats')
+  //  .then(response => response.json())
+  //  .then(data => console.log(data));
+  // }
+
+  const getPlats = () => {
+    const api = axios.get("http://localhost:5000/plats").then(res => console.log(res))
+  }
+
+  getPlats()
 
   const handleOpen = () => {
     setModal(true);
