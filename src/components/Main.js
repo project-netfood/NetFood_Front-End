@@ -21,7 +21,10 @@ export default function main() {
   // }
 
   const getPlats = () => {
-    const api = axios.get("http://localhost:5000/plats").then(res => console.log(res))
+    axios.get(`http://localhost:5000/plats`)
+      .then(res => {
+        console.log(res)
+      })
   }
 
   getPlats()
