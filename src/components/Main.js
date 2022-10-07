@@ -1,12 +1,6 @@
 import * as React from "react";
 import axios from "axios";
 import "../assets/css/index.css";
-import italien1 from "../assets/img/lasagne.jpg";
-import italien2 from "../assets/img/involtinis.jpg";
-import italien3 from "../assets/img/muffuletta.jpg";
-import indien1 from "../assets/img/pizza.jpeg";
-import indien2 from "../assets/img/omelette.jpeg";
-import indien3 from "../assets/img/kefta.jpeg";
 import { useState } from "react";
 import { useEffect } from "react";
 
