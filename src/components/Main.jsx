@@ -75,26 +75,26 @@ export default function main() {
       
 
         <div className="container_main">
-        {plats.map((plat) => (
-          <div key={plat._id} className="theme">
-            <h3 className="titre_theme">{plat.theme_plat}</h3>
-            <div className="plat">
-              <span onClick={handleOpen} className="btn-modal">
-                <figure>
-                  <img
-                    className="img_plat"
-                    src={plat.illustration_plat}
-                    alt="{plat.nom__plat}"
-                  />
-                  <figcaption>
-                    {plat.nom__plat}
-                  </figcaption>
-                </figure>
-              </span>
+          {plats.map((plat) => (
+            <div key={plat._id} className="theme">
+              <h3 className="titre_theme">{plat.theme_plat}</h3>
+              <div className="plat">
+                <span onClick={handleOpen} className="btn-modal">
+                  <figure>
+                    <img
+                      className="img_plat"
+                      src={plat.illustration_plat}
+                      alt="{plat.nom__plat}"
+                    />
+                    <figcaption>
+                      {plat.nom__plat}
+                    </figcaption>
+                  </figure>
+                </span>
+              </div>
             </div>
-          </div>
-      ))}
-      </div>
+          ))}
+        </div>
       
     </React.Fragment>
   );
